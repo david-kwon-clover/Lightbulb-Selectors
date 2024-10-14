@@ -39,6 +39,16 @@ lightBulbs.forEach((lightBulb) =>
     count === 1
       ? (clickCountSubtitle.innerHTML = `You've clicked the lights ${count} time`)
       : (clickCountSubtitle.innerHTML = `You've clicked the lights ${count} times`);
+  })
+);
+
+lightBulbs.forEach((lightBulb) =>
+  lightBulb.addEventListener("mouseenter", function () {
+    this.classList.toggle("active");
+  })
+);
+lightBulbs.forEach((lightBulb) =>
+  lightBulb.addEventListener("mouseleave", function () {
     this.classList.toggle("active");
   })
 );
